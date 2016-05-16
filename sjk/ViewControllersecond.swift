@@ -15,9 +15,9 @@ class ViewControllersecond: UIViewController {
         super.viewDidLoad()
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists t_cound(uid integer primary key,red varchar(20),blue varchar(20),win varchar(20))")
+        db.execute("create table if not exists t_cound(uid integer primary key,red varchar(20),blue varchar(20),win varchar(20),redfont varchar(20),bluefont varchar(20))")
         //如果有数据则加载
-       // initUser()
+        //initUser()
 
         // Do any additional setup after loading the view.
     }
@@ -35,55 +35,63 @@ class ViewControllersecond: UIViewController {
     @IBOutlet weak var redman: UITextField!
   //  @IBOutlet weak var write: UITextField!
     
+    @IBOutlet weak var hhz: UILabel!
     @IBOutlet weak var blueman: UITextField!
     @IBOutlet weak var rn: UILabel!
     @IBOutlet weak var bn: UILabel!
     var tep=0;
     var r=0;
     var b2=0;
-    /*
-   func initUser() {
+    
+   func initUser() {//读出数据
         let data = db.query("select * from t_cound")
         if data.count > 0 {
             //获取最后一行数据显示
             let user = data[data.count - 1]
-          
-            // Redwin.text = user["fance"] as? String
-            //txtMobile.text = user["mobile"] as? String
+            redman.text = user["red"] as? String
+            blueman.text = user["red"] as? String
+            
         }
     }
-    func saveUser() {
-        let fance = self.reed.text!
+    
+    func saveUser() {//写入数据库
+        let red = redman.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_cound(fance) values('\(fance)')"
+        let sql = "insert into t_cound(red) values('\(red)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
         let result = db.execute(sql)
         print(result)
     }
-*/
-    /*
-    @IBAction func du(sender: AnyObject) {
-        //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let fance = self.reed.text!
-        let sql = "insert into t_cound(fance) values('\(fance)')"
+    @IBAction func INdb(sender: AnyObject) {
+        //向数据库存入数据
+        let red=redman.text!;
+        let redfont=redwin.text!;
+        let blue=blueman.text!;
+        let bluefont=bluewin.text!;
+        let win=show.text!;
+        let sql = "insert into t_cound(red, redfont,blue,bluefont,win) values('\(red)','\(redfont)','\(blue)','\(bluefont)','\(win)')"
+        
         print("sql: \(sql)")
-        //通过封装的方法执行sql
-        let result = db.execute(sql)
-        print(result)
-
+        
+         //let result = db.execute(sql)
+        
     }
-
-    @IBAction func xie(sender: AnyObject) {
+    
+    @IBAction func ride(sender: AnyObject) {
         let data = db.query("select * from t_cound")
         if data.count > 0 {
             //获取最后一行数据显示
             let user = data[data.count - 1]
-            write.text = user["fance"] as? String
+            redman.text = user["red"] as? String
+            blueman.text = user["blue"] as? String
            
         }
+        
 
-    }*/
+    }
+
+   
     @IBOutlet weak var redf: UILabel!//红方得分
     @IBOutlet weak var bluef: UILabel!
     //蓝方得分
@@ -116,9 +124,9 @@ class ViewControllersecond: UIViewController {
         }
         if(a1==3)
         {
-            show.text!+="选手： "
-            show.text!+=redman.text!;
-            show.text!+=" 获得本场比赛胜利"
+            hhz.text!+="获胜者:"
+            show.text!=redman.text!;
+           
             tep=1;
         }
         }
@@ -154,10 +162,12 @@ class ViewControllersecond: UIViewController {
         }
         if(b1==3)
         {
-            show.text!+="选手： "
+            
+            show.textColor=UIColor.blueColor();
+            hhz.textColor=UIColor.blueColor();
+            hhz.text!+="获胜者:"
             show.text!+=blueman.text!;
-            show.text!+=" 获得本场比赛胜利"
-            tep=1;
+                        tep=1;
             //show.text!=redman.text!;
         }
         }
@@ -185,6 +195,9 @@ class ViewControllersecond: UIViewController {
         b2++
         bn.text!="\(b2)"
     }
+    
+    
+    
     /*
     // MARK: - Navigation
 
