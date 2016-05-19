@@ -15,7 +15,7 @@ class ViewControllersecond: UIViewController {
         super.viewDidLoad()
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
-        db.execute("create table if not exists t_cound(uid integer primary key,red varchar(20),blue varchar(20),win varchar(20),redfont varchar(20),bluefont varchar(20))")
+        db.execute("create table if not exists t_one(uid integer primary key,red varchar(20),blue varchar(20),win varchar(20),redfont varchar(20),bluefont varchar(20))")
         //如果有数据则加载
         //initUser()
 
@@ -44,7 +44,7 @@ class ViewControllersecond: UIViewController {
     var b2=0;
     
    func initUser() {//读出数据
-        let data = db.query("select * from t_cound")
+        let data = db.query("select * from t_one")
         if data.count > 0 {
             //获取最后一行数据显示
             let user = data[data.count - 1]
@@ -57,7 +57,7 @@ class ViewControllersecond: UIViewController {
     func saveUser() {//写入数据库
         let red = redman.text!
         //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_cound(red) values('\(red)')"
+        let sql = "insert into t_one(red) values('\(red)')"
         print("sql: \(sql)")
         //通过封装的方法执行sql
         let result = db.execute(sql)
@@ -70,24 +70,29 @@ class ViewControllersecond: UIViewController {
         let blue=blueman.text!;
         let bluefont=bluewin.text!;
         let win=show.text!;
-        let sql = "insert into t_cound(red, redfont,blue,bluefont,win) values('\(red)','\(redfont)','\(blue)','\(bluefont)','\(win)')"
+        let sql = "insert into t_one(red, redfont,blue,bluefont,win) values('\(red)','\(redfont)','\(blue)','\(bluefont)','\(win)')"
         
-        print("sql: \(sql)")
-        
+        //print("sql: \(sql)")
+        let result = db.execute(sql)
+        print(result)
+
          //let result = db.execute(sql)
         
     }
     
     @IBAction func ride(sender: AnyObject) {
-        let data = db.query("select * from t_cound")
-        if data.count > 0 {
+        let userdata = db.query("select * from t_one")
+        if (userdata.count > 0) {
             //获取最后一行数据显示
-            let user = data[data.count - 1]
+            let user = userdata[userdata.count - 1]
             redman.text = user["red"] as? String
             blueman.text = user["blue"] as? String
-           
+            redwin.text = user["redfont"] as?String
+            bluewin.text = user["bluefont"] as?String
+
+            
         }
-        
+       
 
     }
 
@@ -196,6 +201,21 @@ class ViewControllersecond: UIViewController {
         bn.text!="\(b2)"
     }
     
+    @IBAction func new(sender: AnyObject) {
+        //全部初始化
+        redwin.text!="";
+        redf.text!="";
+        bluef.text!="";
+        bluewin.text!="";
+        redman.text!="";
+        blueman.text!="";
+        a=0;
+        a1=0;
+        b=0;
+        b1=0;
+        rn.text!="";
+        bn.text!="";
+    }
     
     
     /*
