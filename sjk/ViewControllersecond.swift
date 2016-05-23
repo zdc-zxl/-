@@ -109,31 +109,32 @@ class ViewControllersecond: UIViewController {
     @IBAction func redbutton(sender: AnyObject) {
         if(tep==0)
         {
-        a++
-        if(a<11)
-        {
-            redf.text!="\(a)"
-        }
-        else if(a==11)
-        {
-            a1++
-            redf.text!="\(a)"
-            //redf.text!=""
-            redwin.text!="\(a1)"
-            
-        }
-        else
-        {
-           a=0;
-            redf.text!=""
-        }
-        if(a1==3)
-        {
-            hhz.text!+="获胜者:"
-            show.text!=redman.text!;
+            a++
+            if(a<11)
+            {
+                redf.text!="\(a)"
+            }
+            else if(a==11)
+            {
+                a1++
+                redf.text!="\(a)"
+                //redf.text!=""
+                redwin.text!="\(a1)"
+                a=0
+            }
+          /*  else
+            {
+                a=0;
+                redf.text!=""
+            }
+*/
+                if(a1==3)
+                {
+                    hhz.text!+="获胜者:"
+                    show.text!=redman.text!;
            
-            tep=1;
-        }
+                    tep=1;
+                }
         }
         else
         {
@@ -145,36 +146,36 @@ class ViewControllersecond: UIViewController {
     @IBAction func bluef(sender: AnyObject) {
         if(tep==0)
         {
-        b++
-       // bluef.text!="\(b)"
+            b++
+            // bluef.text!="\(b)"
         
-        if(b<11)
-        {
-            bluef.text!="\(b)"
-        }
-        else if(b==11)
-        {
-            b1++
-            bluef.text!="\(b)"
-            //redf.text!=""
-            bluewin.text!="\(b1)"
+            if(b<11)
+            {
+                bluef.text!="\(b)"
+            }
+            else if(b==11)
+            {
+                b1++
+                bluef.text!="\(b)"
+                //redf.text!=""
+                bluewin.text!="\(b1)"
+            b=0
+            }
+            /*else
+            {
+                b=0;
+                bluef.text!=""
+            }*/
+                if(b1==3)
+                {
             
-        }
-        else
-        {
-            b=0;
-            bluef.text!=""
-        }
-        if(b1==3)
-        {
-            
-            show.textColor=UIColor.blueColor();
-            hhz.textColor=UIColor.blueColor();
-            hhz.text!+="获胜者:"
-            show.text!+=blueman.text!;
+                    show.textColor=UIColor.blueColor();
+                    hhz.textColor=UIColor.blueColor();
+                    hhz.text!+="获胜者:"
+                    show.text!+=blueman.text!;
                         tep=1;
-            //show.text!=redman.text!;
-        }
+                    //show.text!=redman.text!;
+            }
         }
         else
         {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		483112C61CF3250D009ACBB6 /* ViewControllerthried.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483112C51CF3250D009ACBB6 /* ViewControllerthried.swift */; };
 		483AAA841CE0B0CE006EA633 /* ViewControllersecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 483AAA831CE0B0CE006EA633 /* ViewControllersecond.swift */; };
 		483AAA861CE0B949006EA633 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 483AAA851CE0B949006EA633 /* 1.jpg */; };
 		4840E6D61CE41E9A000E8423 /* 2.4.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 4840E6D51CE41E9A000E8423 /* 2.4.PNG */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		483112C51CF3250D009ACBB6 /* ViewControllerthried.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerthried.swift; sourceTree = "<group>"; };
 		483AAA831CE0B0CE006EA633 /* ViewControllersecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllersecond.swift; sourceTree = "<group>"; };
 		483AAA851CE0B949006EA633 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 1.jpg; path = ../../1.jpg; sourceTree = "<group>"; };
 		4840E6D51CE41E9A000E8423 /* 2.4.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.4.PNG; path = ../../2.4.PNG; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				4840E6D51CE41E9A000E8423 /* 2.4.PNG */,
+				483112C51CF3250D009ACBB6 /* ViewControllerthried.swift */,
 				483AAA851CE0B949006EA633 /* 1.jpg */,
 				4877AF9E1CDAFAF100D744EE /* AppDelegate.swift */,
 				4877AFA01CDAFAF100D744EE /* ViewController.swift */,
@@ -300,6 +303,7 @@
 				4877AFDC1CDAFB7000D744EE /* String-Extras.swift in Sources */,
 				483AAA841CE0B0CE006EA633 /* ViewControllersecond.swift in Sources */,
 				4877AFDA1CDAFB7000D744EE /* SQLiteDB.swift in Sources */,
+				483112C61CF3250D009ACBB6 /* ViewControllerthried.swift in Sources */,
 				4877AFA71CDAFAF100D744EE /* sjk.xcdatamodeld in Sources */,
 				4877AF9F1CDAFAF100D744EE /* AppDelegate.swift in Sources */,
 				4877AFDB1CDAFB7000D744EE /* SQLTable.swift in Sources */,
