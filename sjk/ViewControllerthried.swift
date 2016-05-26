@@ -9,13 +9,17 @@
 import UIKit
 
 class ViewControllerthried: UIViewController {
-
+  var db:SQLiteDB!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        db = SQLiteDB.sharedInstance()
+        //如果表还不存在则创建表（其中uid为自增主键）
+        db.execute("create table if not exists t_two(uid integer primary key,red varchar(20),blue varchar(20),win_one varchar(20),red_one varchar(20),red_two varchar(20),blue_one varchar(20) ,blue_two varchar(20),red_one_font varchar(20),red_two_font varchar(20),blue_one_font varchar(20),blue_two_font varchar(20))")
+        //red 红方胜场 ,blue 蓝方胜场 ,win 获胜方，red_one,red_two,blue_one,blue_two纪录比赛名
+        //red_one_font,red_two_font,blue_one_font,blue_two_font个人比赛分数
+     //initUserbuttontitle()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -188,11 +192,86 @@ class ViewControllerthried: UIViewController {
         temp1=0
         win.text!=""
     }
+    //red 红方胜场 ,blue 蓝方胜场 ,win_one 获胜方，red_one,red_two,blue_one,blue_two纪录比赛名
+    //red_one_font,red_two_font,blue_one_font,blue_two_font个人比赛分数
     
+    @IBAction func read(sender: AnyObject) {
+        //向数据库存入数据
+        //let red=redman.text!;
+        let red=redwin.text!;
+        //let blue=blueman.text!;
+        let blue=bluewin.text!;
+        //let win=win.text!;
+        let win_one=win.text!
+        let red_one_font=redonefont.text!
+        let red_two_font=redtwodont.text!
+        let blue_one_font=blueonefont.text!
+        let blue_two_font=bluetwofont.text!
+        let sql = "insert into t_two(red, blue,win_one,red_one_font,red_two_font,blue_one_font,blue_two_font) values('\(red)','\(blue)','\(win_one)','\(red_one_font)','\(red_two_font)','\(blue_one_font)','\(blue_two_font)')"
+        
+        print("sql: \(sql)")
+        let result = db.execute(sql)
+        print(result)
+        
+        //let result = db.execute(sql)
+        
+    }
+    @IBAction func readnew(sender: AnyObject) {
+        let userdata = db.query("select * from t_two")
+        if (userdata.count > 0) {
+            //获取最后一行数据显示
+            let user = userdata[userdata.count - 1]
+            redwin.text = user["red"] as? String
+            bluewin.text = user["blue"] as? String
+            //红蓝双方胜场
+            //red_one_font.text = user["redfont"] as?String
+            //bluewin.text = user["bluefont"] as?String
+            redonefont.text = user["red_one_font"] as?String
+            redtwodont.text = user["red_two_font"] as?String
+            //红方个人得分
+            blueonefont.text = user["blue_one_font"] as?String
+            bluetwofont.text = user["blue_two_font"] as?String
+            //蓝方个人得分
+            win.text=user["win_one"] as?String
+        }
+
+    }
     
+    @IBOutlet weak var redfirst: UIButton!
+    @IBOutlet weak var redsecond: UIButton!
+    @IBOutlet weak var bluefirst: UIButton!
+    @IBOutlet weak var bluesecond: UIButton!
+    var str1=true
+    var str2=0
+    var str3=0
+    var str4=0
+    /*func initUserbuttontitle(){
+         let userdata = db.query("select * from t_people1")
+        if (userdata.count > 0) {
+         let user = userdata[userdata.count - 1]
+        String str = user["red_one"] as?String
     
+        redfirst.setTitle("普通状态", forState:UIControlState.Normal)
     
-    
+    }
+*/
+    //测试
+   
+    //@IBOutlet weak var red_onea: UIButton!
+    //修改按钮名称
+  /*  func initUser() {//读出数据
+        let data = db.query("select * from t_people1")
+        if data.count > 0 {
+            //获取最后一行数据显示
+            let user = data[data.count - 1]
+           
+            // redman.text = user["red"] as? String
+           // blueman.text = user["red"] as? String
+            
+            
+        }
+    }
+    */
     
     
     /*

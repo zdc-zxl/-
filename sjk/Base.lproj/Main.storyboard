@@ -52,7 +52,7 @@
                                     <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="9uL-7S-mGx" kind="modal" id="Udg-9T-3xx"/>
+                                    <segue destination="90M-36-gz3" kind="modal" id="m1D-Bm-Eih"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="欢" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EKA-r6-u7m">
@@ -104,6 +104,113 @@
             </objects>
             <point key="canvasLocation" x="7" y="396"/>
         </scene>
+        <!--View Controllerfouse-->
+        <scene sceneID="iEP-yh-8Vz">
+            <objects>
+                <viewController id="90M-36-gz3" customClass="ViewControllerfouse" customModule="sjk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oh8-3x-Qcy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tHl-SD-uRs">
+                                <rect key="frame" x="210" y="518" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="进入计分界面"/>
+                                <connections>
+                                    <segue destination="9uL-7S-mGx" kind="modal" id="Xb5-sa-4kR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="红方：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kQz-nN-IZr">
+                                <rect key="frame" x="21" y="107" width="51" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.89882607979999996" green="0.30319541350000001" blue="0.27282693419999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蓝方" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Gs-4A-esu">
+                                <rect key="frame" x="21" y="251" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="PYX-Ia-K5g">
+                                <rect key="frame" x="54" y="142" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="textColor" red="0.89882607979999996" green="0.30319541350000001" blue="0.27282693419999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="Woa-b8-DB0">
+                                <rect key="frame" x="54" y="202" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="textColor" red="0.89882607979999996" green="0.30319541350000001" blue="0.27282693419999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="9Ne-GC-diF">
+                                <rect key="frame" x="54" y="308" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="a3G-Ph-Rlo">
+                                <rect key="frame" x="54" y="372" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PeB-ay-3i9">
+                                <rect key="frame" x="158" y="435" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="保存比赛双方队员信息"/>
+                                <connections>
+                                    <action selector="read:" destination="90M-36-gz3" eventType="touchUpInside" id="jak-nZ-l7J"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iqM-L6-40h">
+                                <rect key="frame" x="23" y="34" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="dQI-Uj-ykz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n1P-UM-Lcb">
+                                <rect key="frame" x="143" y="480" width="165" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="显示已经保存的队员信息"/>
+                                <connections>
+                                    <action selector="readpeople:" destination="90M-36-gz3" eventType="touchUpInside" id="qlF-IP-YuC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="bluefour" destination="a3G-Ph-Rlo" id="UXU-tp-mBp"/>
+                        <outlet property="bluethree" destination="9Ne-GC-diF" id="3Gl-yZ-iBW"/>
+                        <outlet property="redone" destination="PYX-Ia-K5g" id="97K-oa-wz4"/>
+                        <outlet property="redtwo" destination="Woa-b8-DB0" id="ZhU-Kr-PaW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9m-mz-Rne" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119" y="1082"/>
+        </scene>
         <!--View Controllerthried-->
         <scene sceneID="5rw-z0-Zub">
             <objects>
@@ -118,7 +225,7 @@
                                 <animations/>
                                 <state key="normal" title="返回"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="modal" id="C8M-zc-i4e"/>
+                                    <segue destination="90M-36-gz3" kind="modal" id="6gz-LT-016"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Dft-29-e8O">
@@ -129,6 +236,9 @@
                                 <state key="normal" title="保存本场比赛">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="read:" destination="9uL-7S-mGx" eventType="touchUpInside" id="y3e-Nk-52X"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.4.PNG" id="Hty-Va-4zP">
                                 <rect key="frame" x="11" y="93" width="299" height="129"/>
@@ -359,17 +469,30 @@
                                 <color key="textColor" red="0.89882607979999996" green="0.30319541350000001" blue="0.27282693419999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tSF-e6-Rei">
+                                <rect key="frame" x="180" y="518" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="显示最新比赛结果"/>
+                                <connections>
+                                    <action selector="readnew:" destination="9uL-7S-mGx" eventType="touchUpInside" id="2xV-1I-Rr2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="bluefirst" destination="neP-xa-m5r" id="vW4-rR-lyE"/>
                         <outlet property="bluefont" destination="Bs6-WT-r1f" id="jYi-dS-NvP"/>
                         <outlet property="blueonefont" destination="R2a-OF-fcJ" id="UlW-5W-jSV"/>
+                        <outlet property="bluesecond" destination="c7P-aO-jqJ" id="eDC-dW-JTc"/>
                         <outlet property="bluetwofont" destination="1vY-In-4cs" id="lwA-o4-Q30"/>
                         <outlet property="bluewin" destination="Rod-uA-2Yk" id="8xW-f1-fmH"/>
+                        <outlet property="redfirst" destination="Ok0-Ae-OZh" id="DfN-cf-EnK"/>
                         <outlet property="redfont" destination="qcQ-h3-Sfc" id="fFx-Zp-ksl"/>
                         <outlet property="redonefont" destination="1s2-xb-qfg" id="i4a-jm-l5d"/>
+                        <outlet property="redsecond" destination="ITP-eK-CR5" id="lkV-F1-IPF"/>
                         <outlet property="redtwodont" destination="olx-6q-vA3" id="2Am-f6-43x"/>
                         <outlet property="redwin" destination="7Ii-lp-ACL" id="4Uk-P1-mO3"/>
                         <outlet property="win" destination="dRa-ux-YpQ" id="0MH-M9-q36"/>
@@ -377,7 +500,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKp-fg-Ffa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="421" y="1126"/>
+            <point key="canvasLocation" x="238" y="1082"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="G41-Q4-Kma">
@@ -403,7 +526,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jn-GC-asW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="1088"/>
+            <point key="canvasLocation" x="1058" y="396"/>
         </scene>
         <!--View Controllersecond-->
         <scene sceneID="Vvu-Hk-ty5">
@@ -696,7 +819,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSc-7p-fvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="404" y="396"/>
+            <point key="canvasLocation" x="352" y="396"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="v21-4P-Bmq">
@@ -794,7 +917,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QD7-iF-XQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="838" y="387"/>
+            <point key="canvasLocation" x="702" y="396"/>
         </scene>
     </scenes>
     <resources>
@@ -802,7 +925,8 @@
         <image name="2.4.PNG" width="476" height="145"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="C8M-zc-i4e"/>
-        <segue reference="sdX-Xp-wDo"/>
+        <segue reference="6gz-LT-016"/>
+        <segue reference="FFs-8c-5S9"/>
+        <segue reference="Cmc-J0-1fp"/>
     </inferredMetricsTieBreakers>
 </document>

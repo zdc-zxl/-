@@ -43,7 +43,7 @@ class ViewControllersecond: UIViewController {
     var r=0;
     var b2=0;
     
-   func initUser() {//读出数据
+   /*func initUser() {//读出数据
         let data = db.query("select * from t_one")
         if data.count > 0 {
             //获取最后一行数据显示
@@ -63,6 +63,7 @@ class ViewControllersecond: UIViewController {
         let result = db.execute(sql)
         print(result)
     }
+*/
     @IBAction func INdb(sender: AnyObject) {
         //向数据库存入数据
         let red=redman.text!;
@@ -216,6 +217,7 @@ class ViewControllersecond: UIViewController {
         b1=0;
         rn.text!="";
         bn.text!="";
+        show.text!="";
     }
     
     
