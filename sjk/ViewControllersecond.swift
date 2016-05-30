@@ -17,8 +17,7 @@ class ViewControllersecond: UIViewController {
         //如果表还不存在则创建表（其中uid为自增主键）
         db.execute("create table if not exists t_one(uid integer primary key,red varchar(20),blue varchar(20),win varchar(20),redfont varchar(20),bluefont varchar(20))")
         //如果有数据则加载
-        //initUser()
-
+    
         // Do any additional setup after loading the view.
     }
 
@@ -99,8 +98,7 @@ class ViewControllersecond: UIViewController {
 
    
     @IBOutlet weak var redf: UILabel!//红方得分
-    @IBOutlet weak var bluef: UILabel!
-    //蓝方得分
+    @IBOutlet weak var bluef: UILabel!//蓝方得分
     @IBOutlet weak var redwin: UILabel!
     @IBOutlet weak var bluewin: UILabel!
     var a=0;
@@ -108,6 +106,38 @@ class ViewControllersecond: UIViewController {
     var a1=0;
     var b1=0;
     @IBAction func redbutton(sender: AnyObject) {
+        /*
+        if(tep==0)
+        {
+            
+            a++
+            if(a<11)
+            {
+                redf.text!="\(a)"
+            }
+            if(a==11)
+            {
+                    a1++
+                    redf.text!="\(a)"
+                    //redf.text!=""
+                    redwin.text!="\(a1)"
+                    a=0
+                    b=0
+            }
+            if(a1==3)
+            {
+                hhz.text!+="获胜者:"
+                show.text!=redman.text!;
+                
+                tep=1;
+            }
+        }
+        else
+        {
+            redf.text!=""
+        }
+    
+       */
         if(tep==0)
         {
             a++
@@ -117,34 +147,65 @@ class ViewControllersecond: UIViewController {
             }
             else if(a==11)
             {
-                a1++
                 redf.text!="\(a)"
-                //redf.text!=""
-                redwin.text!="\(a1)"
-                a=0
-            }
-          /*  else
-            {
-                a=0;
-                redf.text!=""
-            }
-*/
-                if(a1==3)
+                if(b==10)
                 {
-                    hhz.text!+="获胜者:"
-                    show.text!=redman.text!;
-           
-                    tep=1;
+                    redf.text!="11"
+                    tep=2
                 }
+                else
+                {
+                    a1++
+                    redf.text!="\(a)"
+                    //redf.text!=""
+                    redwin.text!="\(a1)"
+                    a=0
+                    b=0
+                }
+                
+            }
+            if(a1==3)
+            {
+                hhz.text!+="获胜者:"
+                show.text!=redman.text!;
+                
+                tep=1;
+            }
         }
         else
         {
             redf.text!=""
         }
         
-    }
-    
+        if(tep==2)
+        {
+            a++
+            if(a-b==3)
+            {
+                
+                a1++
+                redf.text!="\(a-1)"
+                //redf.text!=""
+                redwin.text!="\(a1)"
+                a=0
+                b=0
+                tep=0
+            }
+            if(a1==3)
+            {
+                hhz.text!+="获胜者:"
+                show.text!=redman.text!;
+                tep=1;
+            }
+
+            
+        }
+        
+}
+        
+  
     @IBAction func bluef(sender: AnyObject) {
+       /*
         if(tep==0)
         {
             b++
@@ -161,6 +222,7 @@ class ViewControllersecond: UIViewController {
                 //redf.text!=""
                 bluewin.text!="\(b1)"
             b=0
+            a=0
             }
             /*else
             {
@@ -175,6 +237,7 @@ class ViewControllersecond: UIViewController {
                     hhz.text!+="获胜者:"
                     show.text!+=blueman.text!;
                         tep=1;
+                    
                     //show.text!=redman.text!;
             }
         }
@@ -182,7 +245,77 @@ class ViewControllersecond: UIViewController {
         {
            bluef.text!=""
         }
+        */
+        if(tep==0)
+        {
+            b++
+            if(b<11)
+            {
+                bluef.text!="\(b)"
+            }
+            else if(b==11)
+            {
+                bluef.text!="\(b)"
+                if(a==10)
+                {
+                    bluef.text!="11"
+                    tep=2
+                }
+                else
+                {
+                    b1++
+                    bluef.text!="\(b)"
+                    //redf.text!=""
+                    bluewin.text!="\(b1)"
+                    a=0
+                    b=0
+                }
+                
+            }
+            if(b1==3)
+            {
+                hhz.text!+="获胜者:"
+                show.text!=blueman.text!;
+                
+                tep=1;
+            }
+        }
+        else
+        {
+            bluef.text!=""
+        }
         
+        if(tep==2)
+        {
+            b++
+            if(b-a==3)
+            {
+                
+                b1++
+                bluef.text!="\(b-1)"
+                //redf.text!=""
+                bluewin.text!="\(b1)"
+                a=0
+                b=0
+                tep=0
+            }
+            if(b1==3)
+            {
+                
+                show.textColor=UIColor.blueColor();
+                hhz.textColor=UIColor.blueColor();
+                hhz.text!+="获胜者:"
+                show.text!+=blueman.text!;
+                tep=1;
+                
+                //show.text!=redman.text!;
+            }
+
+            
+            
+        }
+        
+
 
     }
     @IBAction func clean(sender: AnyObject) {
@@ -221,7 +354,11 @@ class ViewControllersecond: UIViewController {
     }
     
     
-    /*
+    @IBAction func next(sender: AnyObject) {
+        bluef.text!=""
+        redf.text!=""
+    }
+        /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

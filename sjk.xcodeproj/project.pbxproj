@@ -25,6 +25,7 @@
 		4877AFDC1CDAFB7000D744EE /* String-Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4877AFD91CDAFB7000D744EE /* String-Extras.swift */; };
 		4877AFDF1CDAFBD500D744EE /* data.db in Resources */ = {isa = PBXBuildFile; fileRef = 4877AFDE1CDAFBD500D744EE /* data.db */; };
 		4877AFE11CDAFBE600D744EE /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4877AFE01CDAFBE600D744EE /* libsqlite3.0.tbd */; };
+		48D3960F1CF72B4F00F06ACA /* lcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 48D3960E1CF72B4F00F06ACA /* lcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		4877AFDD1CDAFB8A00D744EE /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		4877AFDE1CDAFBD500D744EE /* data.db */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = data.db; path = "../../Downloads/hangge_645-2/data.db"; sourceTree = "<group>"; };
 		4877AFE01CDAFBE600D744EE /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		48D3960E1CF72B4F00F06ACA /* lcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = lcon.png; path = ../../lcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		4877AF9D1CDAFAF100D744EE /* sjk */ = {
 			isa = PBXGroup;
 			children = (
+				48D3960E1CF72B4F00F06ACA /* lcon.png */,
 				4840E6D51CE41E9A000E8423 /* 2.4.PNG */,
 				483112C51CF3250D009ACBB6 /* ViewControllerthried.swift */,
 				483AAA851CE0B949006EA633 /* 1.jpg */,
@@ -275,6 +278,7 @@
 				4840E6D61CE41E9A000E8423 /* 2.4.PNG in Resources */,
 				4877AFAC1CDAFAF100D744EE /* LaunchScreen.storyboard in Resources */,
 				4877AFDF1CDAFBD500D744EE /* data.db in Resources */,
+				48D3960F1CF72B4F00F06ACA /* lcon.png in Resources */,
 				4877AFA91CDAFAF100D744EE /* Assets.xcassets in Resources */,
 				4877AFA41CDAFAF100D744EE /* Main.storyboard in Resources */,
 				483AAA861CE0B949006EA633 /* 1.jpg in Resources */,

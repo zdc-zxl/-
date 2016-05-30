@@ -17,7 +17,7 @@ class ViewControllerthried: UIViewController {
         db.execute("create table if not exists t_two(uid integer primary key,red varchar(20),blue varchar(20),win_one varchar(20),red_one varchar(20),red_two varchar(20),blue_one varchar(20) ,blue_two varchar(20),red_one_font varchar(20),red_two_font varchar(20),blue_one_font varchar(20),blue_two_font varchar(20))")
         //red 红方胜场 ,blue 蓝方胜场 ,win 获胜方，red_one,red_two,blue_one,blue_two纪录比赛名
         //red_one_font,red_two_font,blue_one_font,blue_two_font个人比赛分数
-     //initUserbuttontitle()
+     initUserbuttontitle()
     }
     
     override func didReceiveMemoryWarning() {
@@ -55,16 +55,15 @@ class ViewControllerthried: UIViewController {
             red=0
             redfont.text!="11"
             redwin.text!="\(b)"
+            //red=0;
+            blue=0;
         }
         else
       {
         red++
         redfont.text!="\(red)"
         }
-        if(b==3)
-        {
-            win.text!="红队获胜"
-        }
+       
         if(b==3)
         {  win.textColor=UIColor.redColor();
             win.text!="红队获胜"
@@ -87,11 +86,13 @@ class ViewControllerthried: UIViewController {
             red=0
             redfont.text!="11"
             redwin.text!="\(b)"
+             blue=0;
         }
         else
         {
             red++
             redfont.text!="\(red)"
+           
         }
         if(b==3)
         {   win.textColor=UIColor.redColor();
@@ -128,6 +129,8 @@ class ViewControllerthried: UIViewController {
             blue=0
             bluefont.text!="11"
             bluewin.text!="\(a)"
+            red=0;
+           // blue=0;
         }
         else
         {
@@ -154,6 +157,8 @@ class ViewControllerthried: UIViewController {
             blue=0
             bluefont.text!="11"
             bluewin.text!="\(a)"
+            red=0;
+            //blue=0;
         }
         else
         {
@@ -216,6 +221,10 @@ class ViewControllerthried: UIViewController {
         //let result = db.execute(sql)
         
     }
+    @IBAction func next(sender: AnyObject) {
+      redfont.text!=""
+    bluefont.text!=""
+    }
     @IBAction func readnew(sender: AnyObject) {
         let userdata = db.query("select * from t_two")
         if (userdata.count > 0) {
@@ -244,17 +253,22 @@ class ViewControllerthried: UIViewController {
     var str1=true
     var str2=0
     var str3=0
-    var str4=0
-    /*func initUserbuttontitle(){
+    var str4=0;
+    
+    func initUserbuttontitle(){
          let userdata = db.query("select * from t_people1")
         if (userdata.count > 0) {
          let user = userdata[userdata.count - 1]
-        String str = user["red_one"] as?String
-    
-        redfirst.setTitle("普通状态", forState:UIControlState.Normal)
-    
+         let str1 =  user["red_one"] as?String
+         let str2=user["red_two"]as?String
+         let str3=user["blue_one"]as?String
+         let str4=user["blue_two"]as?String
+        redfirst.setTitle(str1, forState:UIControlState.Normal)
+        redsecond.setTitle(str2, forState:UIControlState.Normal)
+        bluefirst.setTitle(str3, forState:UIControlState.Normal)
+        bluesecond.setTitle(str4, forState:UIControlState.Normal)
     }
-*/
+
     //测试
    
     //@IBOutlet weak var red_onea: UIButton!
@@ -284,4 +298,5 @@ class ViewControllerthried: UIViewController {
     }
     */
 
+    }
 }
