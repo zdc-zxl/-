@@ -10,17 +10,17 @@ import UIKit
 
 class ViewControllersecond: UIViewController {
     var db:SQLiteDB!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         db = SQLiteDB.sharedInstance()
         //如果表还不存在则创建表（其中uid为自增主键）
         db.execute("create table if not exists t_one(uid integer primary key,red varchar(20),blue varchar(20),win varchar(20),redfont varchar(20),bluefont varchar(20))")
         //如果有数据则加载
-    
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -28,11 +28,11 @@ class ViewControllersecond: UIViewController {
     }
     
     //@IBOutlet weak var show: UILabel!
-   // @IBOutlet weak var reed: UITextField!
+    // @IBOutlet weak var reed: UITextField!
     
     @IBOutlet weak var show: UILabel!
     @IBOutlet weak var redman: UITextField!
-  //  @IBOutlet weak var write: UITextField!
+    //  @IBOutlet weak var write: UITextField!
     
     @IBOutlet weak var hhz: UILabel!
     @IBOutlet weak var blueman: UITextField!
@@ -41,28 +41,28 @@ class ViewControllersecond: UIViewController {
     var tep=0;
     var r=0;
     var b2=0;
+    var temp=0;
+    /*func initUser() {//读出数据
+    let data = db.query("select * from t_one")
+    if data.count > 0 {
+    //获取最后一行数据显示
+    let user = data[data.count - 1]
+    redman.text = user["red"] as? String
+    blueman.text = user["red"] as? String
     
-   /*func initUser() {//读出数据
-        let data = db.query("select * from t_one")
-        if data.count > 0 {
-            //获取最后一行数据显示
-            let user = data[data.count - 1]
-            redman.text = user["red"] as? String
-            blueman.text = user["red"] as? String
-            
-        }
+    }
     }
     
     func saveUser() {//写入数据库
-        let red = redman.text!
-        //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
-        let sql = "insert into t_one(red) values('\(red)')"
-        print("sql: \(sql)")
-        //通过封装的方法执行sql
-        let result = db.execute(sql)
-        print(result)
+    let red = redman.text!
+    //插入数据库，这里用到了esc字符编码函数，其实是调用bridge.m实现的
+    let sql = "insert into t_one(red) values('\(red)')"
+    print("sql: \(sql)")
+    //通过封装的方法执行sql
+    let result = db.execute(sql)
+    print(result)
     }
-*/
+    */
     @IBAction func INdb(sender: AnyObject) {
         //向数据库存入数据
         let red=redman.text!;
@@ -75,8 +75,8 @@ class ViewControllersecond: UIViewController {
         //print("sql: \(sql)")
         let result = db.execute(sql)
         print(result)
-
-         //let result = db.execute(sql)
+        
+        //let result = db.execute(sql)
         
     }
     
@@ -89,10 +89,10 @@ class ViewControllersecond: UIViewController {
             blueman.text = user["blue"] as? String
             redwin.text = user["redfont"] as?String
             bluewin.text = user["bluefont"] as?String
-
+            
             
         }
-       
+        
 
     }
 
@@ -105,8 +105,10 @@ class ViewControllersecond: UIViewController {
     var b=0;
     var a1=0;
     var b1=0;
+   
     @IBAction func redbutton(sender: AnyObject) {
-        /*
+       
+        
         if(tep==0)
         {
             
@@ -117,13 +119,15 @@ class ViewControllersecond: UIViewController {
             }
             if(a==11)
             {
-                    a1++
-                    redf.text!="\(a)"
-                    //redf.text!=""
-                    redwin.text!="\(a1)"
-                    a=0
-                    b=0
+            
+                a1++
+                redf.text!="\(a)"
+                //redf.text!=""
+                redwin.text!="\(a1)"
+                a=0
+                b=0
             }
+        
             if(a1==3)
             {
                 hhz.text!+="获胜者:"
@@ -137,75 +141,12 @@ class ViewControllersecond: UIViewController {
             redf.text!=""
         }
     
-       */
-        if(tep==0)
-        {
-            a++
-            if(a<11)
-            {
-                redf.text!="\(a)"
-            }
-            else if(a==11)
-            {
-                redf.text!="\(a)"
-                if(b==10)
-                {
-                    redf.text!="11"
-                    tep=2
-                }
-                else
-                {
-                    a1++
-                    redf.text!="\(a)"
-                    //redf.text!=""
-                    redwin.text!="\(a1)"
-                    a=0
-                    b=0
-                }
-                
-            }
-            if(a1==3)
-            {
-                hhz.text!+="获胜者:"
-                show.text!=redman.text!;
-                
-                tep=1;
-            }
-        }
-        else
-        {
-            redf.text!=""
-        }
-        
-        if(tep==2)
-        {
-            a++
-            if(a-b==3)
-            {
-                
-                a1++
-                redf.text!="\(a-1)"
-                //redf.text!=""
-                redwin.text!="\(a1)"
-                a=0
-                b=0
-                tep=0
-            }
-            if(a1==3)
-            {
-                hhz.text!+="获胜者:"
-                show.text!=redman.text!;
-                tep=1;
-            }
 
-            
-        }
-        
 }
         
   
     @IBAction func bluef(sender: AnyObject) {
-       /*
+      
         if(tep==0)
         {
             b++
@@ -224,11 +165,7 @@ class ViewControllersecond: UIViewController {
             b=0
             a=0
             }
-            /*else
-            {
-                b=0;
-                bluef.text!=""
-            }*/
+            
                 if(b1==3)
                 {
             
@@ -245,79 +182,8 @@ class ViewControllersecond: UIViewController {
         {
            bluef.text!=""
         }
-        */
-        if(tep==0)
-        {
-            b++
-            if(b<11)
-            {
-                bluef.text!="\(b)"
-            }
-            else if(b==11)
-            {
-                bluef.text!="\(b)"
-                if(a==10)
-                {
-                    bluef.text!="11"
-                    tep=2
-                }
-                else
-                {
-                    b1++
-                    bluef.text!="\(b)"
-                    //redf.text!=""
-                    bluewin.text!="\(b1)"
-                    a=0
-                    b=0
-                }
-                
-            }
-            if(b1==3)
-            {
-                hhz.text!+="获胜者:"
-                show.text!=blueman.text!;
-                
-                tep=1;
-            }
-        }
-        else
-        {
-            bluef.text!=""
-        }
-        
-        if(tep==2)
-        {
-            b++
-            if(b-a==3)
-            {
-                
-                b1++
-                bluef.text!="\(b-1)"
-                //redf.text!=""
-                bluewin.text!="\(b1)"
-                a=0
-                b=0
-                tep=0
-            }
-            if(b1==3)
-            {
-                
-                show.textColor=UIColor.blueColor();
-                hhz.textColor=UIColor.blueColor();
-                hhz.text!+="获胜者:"
-                show.text!+=blueman.text!;
-                tep=1;
-                
-                //show.text!=redman.text!;
-            }
-
-            
-            
-        }
-        
-
-
     }
+
     @IBAction func clean(sender: AnyObject) {
         a=0;
         redf.text!=""

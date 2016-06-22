@@ -527,7 +527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gKp-fg-Ffa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="1129"/>
+            <point key="canvasLocation" x="239" y="1147"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="G41-Q4-Kma">
@@ -553,7 +553,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jn-GC-asW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="396"/>
+            <point key="canvasLocation" x="1118" y="396"/>
         </scene>
         <!--View Controllersecond-->
         <scene sceneID="Vvu-Hk-ty5">
@@ -858,7 +858,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSc-7p-fvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="352" y="396"/>
+            <point key="canvasLocation" x="428" y="396"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="v21-4P-Bmq">
@@ -956,7 +956,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QD7-iF-XQj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="396"/>
+            <point key="canvasLocation" x="776" y="396"/>
         </scene>
     </scenes>
     <resources>
@@ -964,8 +964,8 @@
         <image name="2.4.PNG" width="476" height="145"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FFs-8c-5S9"/>
-        <segue reference="sdX-Xp-wDo"/>
         <segue reference="6gz-LT-016"/>
+        <segue reference="dQI-Uj-ykz"/>
+        <segue reference="Cmc-J0-1fp"/>
     </inferredMetricsTieBreakers>
 </document>

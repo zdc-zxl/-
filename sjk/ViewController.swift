@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     
     var db:SQLiteDB!
     
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,12 @@ class ViewController: UIViewController {
     }
     
     //点击保存
-   
+    
     
     
     //从SQLite加载数据
     
-  
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
